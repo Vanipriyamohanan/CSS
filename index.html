@@ -1,45 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Flag Project</title>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Write your CSS Code here */
-    .flag{
-      width:900px ;
-      height:600px ;
-      background-color:#CE1126;
-      position: relative;
+    body {
+      font-family: 'Sono', sans-serif;
     }
-    .flag >div{
-      background-color: blue;
-      width: 100%;
-      height:250px
-   
-    
+.pricing-container{
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.pricing-plan{
+  flex: 1;
+max-width: 400px;
+background-color: aliceblue;
+border-radius: 5px;
+text-align: center;
+padding: 20px;
+}
+.plan-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .plan-price {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .plan-features li {
+      margin-bottom: 20px;
+    }
+
+    .plan-button {
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 5px;
+    border: none;}
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
+    }
   </style>
 </head>
 
-<!-- 
-  IMPORTANT! Do not change any HTML
-Don't add any classes/ids/elements 
-Use what you know about combining selectors 
-and CSS specificity instead.
-Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
-Hint 2: You can use CSS inspection to get the colors from
-https://appbrewery.github.io/flag-of-laos/
--->
-
 <body>
-  <div class="flag">
-    <p>The Flag</p>
-    <div>
-      <div>
-        <p>of Laos</p>
-      </div>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
     </div>
   </div>
+
 </body>
 
 </html>
